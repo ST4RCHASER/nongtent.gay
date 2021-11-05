@@ -59,7 +59,7 @@
         , top: 0
     }
 
-    document.getElementById('videoss').addEventListener("mousemove", function (e) {
+    document.addEventListener('click', function (e) {
         if (audioInfo.duration > 0 && !audioInfo.paused) {
             //Its playing...do your job
 
@@ -68,8 +68,9 @@
             audioInfo.play();
             audioInfo.volume = 0.1;
             //Not playing...maybe paused, stopped or never played.
-
         }
+    });
+    document.getElementById('videoss').addEventListener("mousemove", function (e) {
         var $cursor = document.getElementById('cursor')
         //play audio with out html audio tag
         $cursor.style.left = (e.pageX - cursorOffset.left) + 'px';
