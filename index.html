@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>น้องเต็นท์.เกย์</title>
+
+</head>
+
+<body id="container">
+    <div id="cursor"></div>
+    <div class="container mt-3 w-100 h-100">
+        <img src="assets/logo.png" alt="best logo ever" class="d-inline logo">
+        <h1>น้องเต็นท์.เกย์</h1>
+        <p>สวัสดีครับผมชื่อเต็นท์ วันนี้วันเกิดผมจึงทำเว็บฉลองวันเกิดตัวเองครับ</p>
+        <div class="hbd"><img src="assets/cake.gif" alt=""> HBD 6/11/21</div>
+        <br>
+        <a href="/fap">
+            <button><img src="fap/images/bird.png" alt="flighting tent game" class="game-ico">
+                เกมใหม่ล่าสุดที่ผมทำฉลองตัวเอง *** กดเพื่อลองเล่น *** </button></a>
+        <a target="_blank" href="https://hbd.nongtent.gay">
+            <button><img src="assets/logo.png" alt="flighting tent game" class="game-ico">
+                หรืออยากดูคลิปหลุดของผม *** กดที่นี้ *** </button></a>
+        <img src="assets/1.png" alt="อิอิ">
+        <br>
+        <br>
+        <div id="videoss">
+            <h1>คลิปลับห้ามดูนะ!!!!</h1>
+            <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls>
+                    <source src="https://box.lolis.love/0/xahtt.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+                <iframe class="embed-responsive-item" src=""></iframe>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls>
+                    <source src="https://lolis.love/wt4a8.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <iframe class="embed-responsive-item" src=""></iframe>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls>
+                    <source src="https://lolis.love/ymk2a.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <iframe class="embed-responsive-item" src=""></iframe>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls>
+                    <source src="https://lolis.love/i7lbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <iframe class="embed-responsive-item" src=""></iframe>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls>
+                    <source src="https://lolis.love/ap3ic.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <iframe class="embed-responsive-item" src=""></iframe>
+            </div>
+        </div>
+    </div>
+    <audio id="myAudioTagID" src="assets/ahhhh.mp3"></audio>
+</body>
+<script>
+    let audioInfo = false;
+    // Set the offset so the the mouse pointer matches your gif's pointer
+    var cursorOffset = {
+        left: 0
+        , top: 0
+    }
+
+    document.getElementById('videoss').addEventListener("mousemove", function (e) {
+        if (audioInfo.duration > 0 && !audioInfo.paused) {
+            //Its playing...do your job
+
+        } else {
+            audioInfo = new Audio('assets/ahhhh.mp3');
+            audioInfo.play();
+            //Not playing...maybe paused, stopped or never played.
+
+        }
+        var $cursor = document.getElementById('cursor')
+        //play audio with out html audio tag
+        $cursor.style.left = (e.pageX - cursorOffset.left) + 'px';
+        $cursor.style.top = (e.pageY - cursorOffset.top) + 'px';
+
+    }, false);
+</script>
+
+</html>
