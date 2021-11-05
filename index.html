@@ -49,7 +49,7 @@
         <br>
         <br>
     </div>
-    <audio id="myAudioTagID" src="assets/ahhhh.mp3"></audio>
+    <audio id="myAudioTagID" src="assets/3cha.mp3"></audio>
 </body>
 <script>
     let audioInfo = false;
@@ -64,8 +64,9 @@
             //Its playing...do your job
 
         } else {
-            audioInfo = new Audio('assets/ahhhh.mp3');
+            audioInfo = new Audio('assets/3cha.mp3');
             audioInfo.play();
+            audioInfo.volume = 0.1;
             //Not playing...maybe paused, stopped or never played.
 
         }
